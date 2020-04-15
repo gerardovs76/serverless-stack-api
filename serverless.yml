@@ -41,10 +41,10 @@ functions:
     handler: create.main
     events:
       - http:
-        path: notes
-        method: post
-        cors: true
-        authorizer: aws-iam
+          path: notes
+          method: post
+          cors: true
+          authorizer: aws-iam
   get:
     # Defines an HTTP API endpoint that calls the main function in get.js
     # - path: url path is /notes/{id}
@@ -52,10 +52,10 @@ functions:
     handler: get.main
     events:
       - http:
-        path: notes/{id}
-        method: get
-        cors: true
-        authorizer: aws-iam
+          path: notes/{id}
+          method: get
+          cors: true
+          authorizer: aws-iam
   list:
     # Defines an HTTP API endpoint that calls the main function in list.js
     # - path: url path is /notes
@@ -63,21 +63,21 @@ functions:
     handler: list.main
     events:
       - http:
-        path: notes
-        method: get
-        cors: true
-        authorizer: aws-iam
+          path: notes
+          method: get
+          cors: true
+          #authorizer: aws-iam
   update:
     # Defines an HTTP API endpoint that calls the main function in update.js
     # - path: url path is /notes/{id}
     # - method: PUT request
     handler: update.main
     events:
-      - http:
-        path: notes/{id}
-        method: put
-        cors: true
-        authorizer: aws-iam
+      - htt:
+          path: notes/{id}
+          method: put
+          cors: true
+          authorizer: aws-iam
   delete:
     # Defines an HTTP API endpoint that calls the main function in delete.js
     # - path: url path is /notes/{id}
@@ -85,10 +85,10 @@ functions:
     handler: delete.main
     events:
       - http:
-        path: notes/{id}
-        method: delete
-        cors: true
-        authorizer: aws-iam
+          path: notes/{id}
+          method: delete
+          cors: true
+          authorizer: aws-iam
   billing:
     # Defines an HTTP API endpoint that calls the main function in billing.js
     # - path: url path is /billing
@@ -96,10 +96,10 @@ functions:
     handler: billing.main
     events:
       - http:
-        path: billing
-        method: post
-        cors: true
-        authorizer: aws-iam
+          path: billing
+          method: post
+          cors: true
+          authorizer: aws-iam
 # Create our resources with separate CloudFormation templates
 resources:
   #API Gateway Errors
