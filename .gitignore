@@ -44,7 +44,7 @@ Session.vim
 .webpack
 .serverless
 
-# env
+# Env
 env.yml
 .env
 
